@@ -8,9 +8,8 @@ public class Assistant extends CollegePerson implements LearningPerson, Teaching
     private boolean isGoingToBeAPhD;
 
     public Assistant(String name, String surname, int id, boolean willBeaAPhD) {
-        this.name = name;
-        this.surname = surname;
-        this.collegeId = id;
+        super(name, surname, id);
+        isGoingToBeAPhD = willBeaAPhD;
     }
 
     @Override
@@ -21,5 +20,6 @@ public class Assistant extends CollegePerson implements LearningPerson, Teaching
     @Override
     public void teachToOtherPeople() {
         System.out.println(name + " " + surname + " likes to teach to other people");
+        System.out.println("Is " + name + " " + surname + " going to be a PhD? " + isGoingToBeAPhD);
     }
 }
